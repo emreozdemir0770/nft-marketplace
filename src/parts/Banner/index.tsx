@@ -2,7 +2,7 @@ import tw, { css, styled } from "twin.macro";
 import BannerButton from "../../components/BannerButton";
 
 const BannerContainer = styled.div(
-  tw`px-6 py-8 rounded-xl flex flex-col bg-gradient-to-r from-purple-background-banner-1 to-purple-background-banner-2 relative`,
+  tw`px-8 py-10 rounded-xl overflow-hidden flex flex-col bg-gradient-to-r from-purple-background-banner-1 to-purple-background-banner-2 relative`,
   css`
     h1 {
       font-size: 27px;

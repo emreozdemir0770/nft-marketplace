@@ -14,6 +14,7 @@ module.exports = {
         gray: {
           "background-icon-1": "#31333D",
           "background-icon-2": "#3D3F49",
+          "background-card-activity": "#878787",
         },
       },
       padding: {

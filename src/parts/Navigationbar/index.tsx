@@ -4,7 +4,7 @@ import UserProfile from "../../components/UserProfile";
 import Search from "../../components/Search";
 
 const NavigationContainer = styled.div(
-  tw`gap-x-4 w-full p-5 flex flex-row rounded-lg`
+  tw`gap-x-4 w-full p-5 flex flex-row  bg-gray-900/95 backdrop-blur-md sticky top-0 z-50`
 );
 
 const CardNFTValue = styled.div(

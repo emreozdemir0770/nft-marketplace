@@ -7,7 +7,7 @@ export interface UserProfileProps {
 }
 
 const UserProfileContainer = styled.div(
-  tw`text-white relative h-12 rounded-full  flex-shrink-0  hover:bg-black-background-sidebar`
+  tw`text-white relative h-12 rounded-full  flex-shrink-0  hover:bg-white hover:bg-opacity-10 hover:backdrop-blur-md`
 );
 
 const UserProfileNvaigation = styled.button(
@@ -15,7 +15,7 @@ const UserProfileNvaigation = styled.button(
 );
 
 const NavigationPopupContainer = styled.div(() => [
-  tw`border-gray-background-icon-1 group-focus-within:opacity-100 group-focus-within:translate-y-1 group-focus-within:visible absolute right-0 top-full invisible z-50 w-60 bg-black-background-sidebar rounded-xl border opacity-0 transition-all`,
+  tw`border-gray-background-icon-1  backdrop-blur-md bg-gray-900 bg-opacity-75  group-focus-within:opacity-100 group-focus-within:translate-y-1 group-focus-within:visible absolute right-0 top-full invisible z-50 w-60 rounded-xl border opacity-0 transition-all`,
   ,
   css`
     ul {
@@ -24,14 +24,14 @@ const NavigationPopupContainer = styled.div(() => [
       flex-direction: column;
     }
     ul > li {
-      padding: 0.5rem 1rem;
+      padding: 1rem 1rem;
       display: flex;
       justify-content: flex-end;
       a {
         color: #fff;
         border-radius: 0.5rem;
         cursor: pointer;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         text-align: right;
         width: 100%;
@@ -46,7 +46,7 @@ const NavigationPopupContainer = styled.div(() => [
 function UserProfile({ name, profile }: UserProfileProps) {
   return (
     <UserProfileContainer className="group">
-      <UserProfileNvaigation onClick={(e) => e.preventDefault()} className="">
+      <UserProfileNvaigation onClick={(e) => e.preventDefault()}>
         <IconNavigation icon={profile} isUserProfile={true} text={name} />
         {name}
         <svg
@@ -62,7 +62,7 @@ function UserProfile({ name, profile }: UserProfileProps) {
           />
         </svg>
       </UserProfileNvaigation>
-      <NavigationPopupContainer tabIndex={0} className="">
+      <NavigationPopupContainer tabIndex={0}>
         <ul>
           <li>
             <a href="#">Dashboard</a>

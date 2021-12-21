@@ -139,6 +139,8 @@ const CustomStyles = createGlobalStyle`
       font-display: swap;
   }
 
+   /* Hide scrollbar for Chrome, Safari and Opera */
+
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -148,12 +150,17 @@ const CustomStyles = createGlobalStyle`
   html, body {
     height: 100%;
     max-width: 100vw;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   }
   body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: #1B1E2A;
+  }
+  body::-webkit-scrollbar {
+    display: none;
   }
   img, picture, video, canvas, svg {
     display: block;
