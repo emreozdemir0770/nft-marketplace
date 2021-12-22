@@ -44,8 +44,11 @@ const LoveButton = styled.img(({ loved }: { loved: boolean }) => [
 
 function CardImage({ artworksUrl, category, timer, name }: CardImageProps) {
   const [imgLoad, setImgLoad] = useState(false);
-  const [tm, setTime] = useState<number[]>([]);
+  const [tm, setTime] = useState<number[] | null>(null);
   useEffect(() => {
+    if (new Date().getTime() > timer.getTime()) {
+      return;
+    }
     const intervalId = setInterval(() => {
       let diff = new Date().getTime() - timer.getTime();
       setTime(MillisConvertion(diff));
@@ -65,7 +68,10 @@ function CardImage({ artworksUrl, category, timer, name }: CardImageProps) {
       <CategoryBadge>{category}</CategoryBadge>
       <LoveButton src="/icons/LOVE.svg" loved={true} alt={`love-${name}`} />
       <TimerWrapper>
-        <span>{`End in: ${tm[0]}h: ${tm[1]}m: ${tm[2]}s`}</span>
+        {tm && <span>{`End in: ${tm[0]}h: ${tm[1]}m: ${tm[2]}s`}</span>}
+        {!tm && (
+          <span style={{ color: "red", fontWeight: 600 }}>Bid ended</span>
+        )}
       </TimerWrapper>
     </ImageContainer>
   );

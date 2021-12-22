@@ -6,7 +6,7 @@ function MillisConvertion(duration: number) {
   hours = hours < 10 ? 0 + hours : hours;
   minutes = minutes < 10 ? 0 + minutes : minutes;
   seconds = seconds < 10 ? 0 + seconds : seconds;
-  return [hours, minutes, seconds];
+  return [Math.abs(hours), Math.abs(minutes), Math.abs(seconds)];
 }
 
 export { MillisConvertion };
