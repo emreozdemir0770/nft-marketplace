@@ -8,7 +8,7 @@ const CardContainer = styled.div(() => [
   css`
     height: 336px;
     width: 100%;
-    min-width: 225px;
+    min-width: 325px;
     h3 {
       font-weight: 500;
       font-size: 18px;

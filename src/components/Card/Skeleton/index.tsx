@@ -4,7 +4,8 @@ const SkeletonContainer = styled.div(() => [
   tw`rounded-xl bg-gradient-to-r from-purple-background-banner-1 to-purple-background-banner-2 animate-pulse`,
   css`
     height: 160px;
-    width: 296px;
+    width: 100%;
+    min-width: 325px;
   `,
 ]);
 

@@ -2,7 +2,8 @@ import tw, { css, styled } from "twin.macro";
 
 import Skeleton from "../Skeleton";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { MillisConvertion } from "../../../lib/Time";
 
 export interface CardImageProps {
   artworksUrl: string;
@@ -43,6 +44,14 @@ const LoveButton = styled.img(({ loved }: { loved: boolean }) => [
 
 function CardImage({ artworksUrl, category, timer, name }: CardImageProps) {
   const [imgLoad, setImgLoad] = useState(false);
+  const [tm, setTime] = useState<number[]>([]);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      let diff = new Date().getTime() - timer.getTime();
+      setTime(MillisConvertion(diff));
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <ImageContainer>
       <img
@@ -56,7 +65,7 @@ function CardImage({ artworksUrl, category, timer, name }: CardImageProps) {
       <CategoryBadge>{category}</CategoryBadge>
       <LoveButton src="/icons/LOVE.svg" loved={true} alt={`love-${name}`} />
       <TimerWrapper>
-        <span>{`End in: 50h: 34m: 22s`}</span>
+        <span>{`End in: ${tm[0]}h: ${tm[1]}m: ${tm[2]}s`}</span>
       </TimerWrapper>
     </ImageContainer>
   );
