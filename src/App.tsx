@@ -10,7 +10,7 @@ import tw, { styled, css } from "twin.macro";
 const MainWrapper = styled.div(() => [
   tw`flex flex-col lg:flex-row sm:w-full w-screen`,
   css`
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
   `,
 ]);
 
