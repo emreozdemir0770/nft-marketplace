@@ -4,9 +4,11 @@ import Bidder from "./Bidder";
 import { UserBidder } from "../../parts/Explore/ButtonList";
 
 const CardContainer = styled.div(() => [
-  tw`p-3 bg-black-background-sidebar w-full mx-2 mb-6 outline-none border-none rounded-xl block max-w-xs`,
+  tw`p-3 bg-black-background-sidebar flex-shrink-0 w-full mx-2 mb-6 outline-none border-none rounded-xl block`,
   css`
     height: 336px;
+    width: 100%;
+    min-width: 225px;
     h3 {
       font-weight: 500;
       font-size: 18px;

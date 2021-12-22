@@ -4,6 +4,7 @@ export interface ActivityProps {
   avatar: string;
   message: string;
   id: string;
+  isOnline: boolean;
 }
 
 const Data: ActivityProps[] = [
@@ -13,6 +14,7 @@ const Data: ActivityProps[] = [
     avatar: "https://i.pravatar.cc/150?img=37",
     message: "dolores provident corporis",
     id: "1",
+    isOnline: true,
   },
   {
     createdAt: new Date("2021-11-19T00:01:44.768Z"),
@@ -20,20 +22,23 @@ const Data: ActivityProps[] = [
     avatar: "https://i.pravatar.cc/150?img=32",
     message: "incidunt corporis aut",
     id: "2",
+    isOnline: false,
   },
   {
     createdAt: new Date("2021-11-18T08:50:15.283Z"),
     name: "Mrs. Annie",
     avatar: "https://i.pravatar.cc/150?img=39",
     message: "dolores next time",
-    id: "1",
+    id: "3",
+    isOnline: true,
   },
   {
     createdAt: new Date("2021-11-19T00:01:44.768Z"),
     name: "Riven",
     avatar: "https://i.pravatar.cc/150?img=3",
     message: "sdfaa curposa aut",
-    id: "2",
+    id: "4",
+    isOnline: false,
   },
 ];
 

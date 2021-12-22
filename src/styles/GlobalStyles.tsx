@@ -149,11 +149,12 @@ const CustomStyles = createGlobalStyle`
   }
   html, body {
     height: 100%;
-    max-width: 100vw;
+    max-width:100%;  /* added */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   }
   body {
+    max-width: 100vw;
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;

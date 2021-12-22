@@ -10,7 +10,7 @@ export interface ArtistProps {
 }
 
 const ArtistContainer = styled.div(() => [
-  tw`relative flex flex-row items-center flex-shrink-0 gap-x-4 w-full`,
+  tw`relative flex flex-row items-center flex-shrink-0 gap-x-2 sm:gap-x-4 w-full`,
   css`
     height: 48px;
     h2 {
@@ -23,7 +23,7 @@ const ArtistContainer = styled.div(() => [
 ]);
 
 const ImageProfile = styled.img(
-  tw`w-12 h-12 rounded-full p-0 outline-none bg-none m-0 flex-shrink-0`
+  tw`sm:w-12 sm:h-12 w-8 h-8 rounded-full p-0 outline-none bg-none m-0 flex-shrink-0`
 );
 
 const UsernameContainer = styled.div(() => [
@@ -40,11 +40,24 @@ const UsernameContainer = styled.div(() => [
       font-weight: 400;
       color: #878787;
     }
+    @media (max-width: 640px) {
+      h3 {
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+      }
+      p {
+        font-size: 12px;
+        font-weight: 400;
+        color: #878787;
+      }
+    }
   `,
 ]);
 
 const ButtonFollow = styled.div(
-  tw`py-2 px-4 rounded-xl text-white font-normal text-base bg-gradient-to-r absolute right-2 from-purple-background-banner-1 to-purple-background-banner-2`
+  tw`py-2 px-4 rounded-xl text-white cursor-pointer font-normal text-base bg-gradient-to-r absolute right-2 from-purple-background-banner-1 to-purple-background-banner-2`
 );
 
 function Artist(props: ArtistProps) {

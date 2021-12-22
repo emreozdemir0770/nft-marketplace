@@ -26,8 +26,11 @@ const Button = styled.button(
       tw`border-l-4 border-purple-sidebar-active bg-white bg-opacity-10`,
     isExpand &&
       css`
+        justify-content: start;
+        padding: 16px 12px;
         span {
           display: block;
+          margin-left: 16px;
         }
       `,
   ]

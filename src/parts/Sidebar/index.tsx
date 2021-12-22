@@ -3,7 +3,7 @@ import ButtonSidebar from "../../components/ButtonSidebar";
 import SidebarContent from "./Content";
 
 const SidebarContainer = styled.div(({ isExpand }: { isExpand: boolean }) => [
-  tw`left-0 h-screen flex flex-col w-20 flex-shrink-0 sticky top-0 z-50 bg-black-background-sidebar items-center`,
+  tw`left-0 h-screen hidden flex-none sm:flex flex-col w-20 flex-shrink-0 sm:sticky top-0 z-50 bg-black-background-sidebar items-center`,
   isExpand && tw``,
 ]);
 

@@ -2,6 +2,10 @@ module.exports = {
   content: [],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+        // => @media (min-width: 992px) { ... }
+      },
       colors: {
         purple: {
           "sidebar-active": "#AB52F3",

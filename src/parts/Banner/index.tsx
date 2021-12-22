@@ -19,14 +19,30 @@ const BannerContainer = styled.div(
     }
     ,
     div {
+      z-index: 1;
       button {
         margin-right: 16px;
+        margin-bottom: 8px;
+      }
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      h2 {
+        font-size: 14px;
       }
     }
   `
 );
 
-const ImageBanner = styled.img(tw`absolute right-0 bottom-0 h-2/3`);
+const ImageBanner = styled.img(() => [
+  tw`absolute right-0 bottom-0 h-2/3`,
+  css`
+    z-index: 0;
+  `,
+]);
 
 function Banner() {
   return (
