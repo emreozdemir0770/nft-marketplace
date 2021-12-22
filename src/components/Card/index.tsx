@@ -4,7 +4,7 @@ import Bidder from "./Bidder";
 import { UserBidder } from "../../parts/Explore/ButtonList";
 
 const CardContainer = styled.div(() => [
-  tw`p-3 bg-black-background-sidebar flex-shrink-0 w-full mx-2 mb-6 outline-none border-none rounded-xl block`,
+  tw`p-3 relative bg-black-background-sidebar flex-shrink-0 w-full mx-2 mb-6 outline-none border-none rounded-xl block`,
   css`
     height: 336px;
     width: 100%;

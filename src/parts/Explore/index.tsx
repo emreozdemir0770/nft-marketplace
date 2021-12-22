@@ -59,11 +59,11 @@ function Explore() {
       <ExploreContent>
         {DataExplore &&
           DataExplore.map((item, index) => {
-            return (
+            return new Date().getTime() < item.bid_ends.getTime() ? (
               <li key={index}>
                 <Card {...item} category="Art" />
               </li>
-            );
+            ) : null;
           })}
       </ExploreContent>
     </ExploreContainer>
