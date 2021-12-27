@@ -3,7 +3,7 @@
 NFT Marketplace is one of the challenges from waveast to create an dashboard NFT marketplace.
 
 Link: *__[NFT Marketplace Dashboard](https://nftmarket04.netlify.app/)__*
-![Preview](https://ibb.co/Y2pHSgB)
+![Preview](https://firebasestorage.googleapis.com/v0/b/image-uploader-540c4.appspot.com/o/images%2Fbd570efa-7c90-4ca5-8fe9-fa348a3160592021-12-27-17-52-nftmarket04.netlify.app.png?alt=media&token=aa92f1de-c16d-47dc-a489-cbc6917dc49d)
 
 ## Installation
 
